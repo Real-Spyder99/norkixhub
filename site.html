@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORKIX HUB</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    text-align: center;
+}
+
+body{
+    color:#fff;
+    background:linear-gradient(-45deg,#FDBF2D,#003152,#02F5A1,purple,#FFCC99,red);
+    background-size:600% 600%;
+    animation:rgb 8s linear infinite;
+}
+
+@keyframes rgb{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+/* HEADER */
+
+header{
+    background:#FDBF2D;
+    color:#111827;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    text-align: center;
+}
+
+header h1{
+    font-size:32px;
+}
+
+.talk-btn{
+    background:#111827;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.talk-btn:hover{
+    background:#00bfff;
+    color:#000;
+    box-shadow:0 0 20px #00bfff;
+}
+
+@media(max-width:768px){
+header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#111827;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    background:#003152;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* SERVICES */
+
+.services{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:#fff;
+    color:#111827;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* PRICING */
+
+#pricing{
+    text-align:center;
+}
+
+.pricing-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.price-card{
+    width:300px;
+    background:white;
+    color:#111827;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+}
+
+.price-card h3{
+    color:#2563eb;
+}
+
+.price-card h1{
+    margin:20px 0;
+}
+
+.price-card p{
+    margin:10px 0;
+}
+
+.price-card button{
+    margin-top:20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.price-card button:hover{
+    background:#1d4ed8;
+}
+
+/* CONTACT */
+
+#contact{
+    text-align:center;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:15px 40px;
+    border-radius:40px;
+    font-size:32px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.section-title h2:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+.about-box{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    color:#111827;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    line-height:1.8;
+    font-size:18px;
+    text-align:justify;
+    transition:0.3s;
+}
+
+.about-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:15px 40px;
+    border-radius:40px;
+    font-size:32px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s ease;
+}
+
+.section-title h2:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(37,99,235,0.5);
+}
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:15px 40px;
+    border-radius:40px;
+    font-size:32px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:all 0.3s ease;
+}
+
+.section-title h2:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(37,99,235,0.5);
+}
+.contact-btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-btn:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(37,99,235,0.4);
+}
+.contact-btn{
+    display:inline-block;
+    background:#131D38;
+    color:#FDDD34;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+    transition:0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-btn:hover{
+    background:#07191E;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(37,99,235,0.4);
+}
+
+.contact-btn:active{
+    transform:scale(0.98);
+}
+#faq{
+    padding:80px 20px;
+}
+
+.faq-container{
+    max-width:850px;
+    margin:40px auto;
+}
+
+.faq-item{
+    background:#ffffff;
+    color:#111827;
+    border-radius:15px;
+    margin-bottom:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    overflow:hidden;
+    transition:.3s ease;
+}
+
+.faq-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+.faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:20px;
+    font-size:18px;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:"+";
+    font-size:28px;
+    color:#2563eb;
+    transition:.3s;
+}
+
+.faq-item[open] summary::after{
+    content:"−";
+}
+
+.faq-item p{
+    padding:0 20px 20px;
+    line-height:1.8;
+    color:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>NORKIX HUB.</h1>
+        <p>Welcome To NorkixHub!</p>
+    </div>
+
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1> Norkix Hub -Classy Looks, Everyday Luxury</h1>
+
+
+    <a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I'm%20interested%20in%20your%20services."
+   class="btn"
+   target="_blank">
+   Chat With Us
+</a>
+</section>
+
+<section id="about">
+
+    <div class="section-title">
+        <h2>About Us</h2>
+    </div>
+
+    <div class="about-box">
+        <p>
+            At Norkix Hub, we bring you the perfect mix of fashion and beauty from trendy ladies’ bags,dresses and stylish footwear to must-have skincare essentials, we’ve got everything to elevate your look. We believe every woman deserves to feel confident, so we offer quality items at prices you’ll love. Shop with Norkix Hub for the latest styles, smooth customer service, and products that make you glow—inside and out.</p>
+
+            <strong>Norkix Hub -Classy Looks, Everyday Luxury</strong>
+        </p>
+    </div>
+
+</section>
+
+<section id="services">
+
+<div class="section-title">
+    <h2>Our Services</h2>
+</div>
+
+<br><br>
+
+<div class="services">
+
+<div class="card">
+<h3>Product Sales</h3>
+
+<p>
+We offer a carefully selected collection of quality fashion and beauty products to suit every style and occasion. Our range includes ladies' bags, shoes, heels, sandals, skincare products, and fashion accessories at competitive prices. Every product is chosen with a focus on quality, style, and customer satisfaction. Whether you're shopping for everyday essentials or something special, we have options you'll love. Shop with confidence and enjoy a simple, convenient, and enjoyable shopping experience.
+</p>
+
+</div>
+
+<div class="card">
+<h3>Nationwide Delivery</h3>
+
+<p>
+<p>Nationwide Delivery</p>
+We provide fast and reliable nationwide delivery to ensure your orders reach you safely and on time. Our delivery service covers customers across the country, making shopping convenient no matter where you are. Every order is carefully packaged to maintain its quality during transit. We keep you informed throughout the delivery process for a smooth shopping experience. Shop with confidence knowing your favorite products are just a few clicks away.
+</p>
+
+</div>
+
+<div class="card">
+<h3>Personal Shopping & Style Advice</h3>
+
+<p>
+<p>We provide a wide selection of stylish and quality fashion and beauty products to meet your everyday needs. Our collection includes trendy bags, shoes, heels, sandals, skincare products, and fashion accessories. We carefully choose products that combine beauty, durability, and affordability. Our goal is to help customers find products that match their personal style and lifestyle. Enjoy a smooth shopping experience with products you can trust.</p>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="pricing">
+
+<div class="section-title">
+    <h2>Our Pricing</h2>
+</div>
+
+
+<br><br>
+
+<div class="pricing-container">
+
+<div class="price-card">
+<h3>Bags</h3>
+<h1>GH₵100-GH₵350</h1>
+
+<p>✔ Durable Material – Made from high-quality materials with sturdy stitching and reliable hardware for long-lasting use.</p>
+<p>✔ Spacious & Functional – Designed with ample room and organized compartments to carry daily essentials like a phone, wallet, makeup, and keys</p>
+<p>✔ Stylish Design – A modern, elegant look that complements both casual and formal outfits.</p>
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="price-card">
+<h3>Slippers & Sandals</h3>
+<h1>From GH₵100–GH₵250</h1>
+
+<p>✔ Comfortable Fit – Designed with cushioned soles to provide all-day comfort for everyday wear.</p>
+<p>✔ Stylish & Trendy – Features a fashionable design that pairs well with dresses, jeans, skirts, and other outfits.</p>
+<p>✔ Durable & High Quality – Made with strong materials and sturdy construction for long-lasting wear.These are concise and suitable for product descriptions, online listings, or promotional posts.</p>
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+
+<div class="price-card">
+<h3>Heels</h3>
+<h1>GH₵100-GH₵250</h1>
+
+<p>✔ Elegant & Fashionable – Designed to add a touch of sophistication and elevate any outfit.</p>
+<p>✔ Comfortable Support – Features a stable heel and cushioned insole for greater comfort during extended wear.</p>
+<p>✔ Premium Quality – Made with durable materials and quality craftsmanship for lasting style and performance.</p>
+
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="price-card">
+<h3>Shoes</h3>
+<h1>GH₵200-GH₵350</h1>
+
+<p>✔ Stylish Design – A modern, versatile look that complements both casual and smart outfits.</p>
+<p>✔ Comfortable to Wear – Designed with a soft, supportive fit for all-day comfort.</p>
+<p>✔ Durable & Long-Lasting – Made from quality materials with strong construction for everyday use</p>
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="price-card">
+<h3>SkinCare Products</h3>
+<h1>GH₵50-GH₵150</h1>
+
+<p>✔ Gentle on the Skin – Formulated to fit easily into a daily skincare routine.</p>
+<p>✔ Nourishing & Hydrating – Helps keep the skin feeling soft, smooth, and moisturized.</p>
+<p>✔ Quality Ingredients – Made with carefully selected ingredients to support healthy-looking skin.</p>
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+<div class="price-card">
+<h3>Fashion Accessories</h3>
+<h1>GH₵150-GH₵250</h1>
+
+<p>✔ Trendy & Stylish – Designed to enhance your look and complement a variety of outfits.</p>
+<p>✔ High-Quality Finish – Made with durable materials and attention to detail for lasting appeal.</p>
+<p>✔ Versatile & Easy to Wear – Perfect for everyday use, special occasions, or adding a fashionable touch to any outfit.</p>
+
+<a href="https://wa.me/233206061561?text=Hello%20SPYDERTECH!%20I%20would%20like%20to%20order%20a%20Professional%20CV." class="order-btn" target="_blank">
+<button>Order Now</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="section-title">
+    <h2>Contact Us</h2>
+</div>
+
+<section id="faq">
+
+    <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-container">
+
+        <details class="faq-item">
+            <summary>📄  ⁠How can I place an order?</summary>
+            <p>To place an order, simply contact Norkix Hub with the item you would like to purchase. Our team will assist you with product availability, details, and the ordering process.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you offer delivery services?</summary>
+            <p>Yes. We offer reliable delivery services within Accra and across Ghana. Delivery fees and timelines depend on your location.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>What payment methods do you accept?</summary>
+            <p>Payment details will be provided once your order has been confirmed. Orders are processed after payment confirmation.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Can I reserve an item?</summary>
+            <p>Items are only reserved after payment confirmation. We operate on a first-paid, first-served basis to ensure a smooth shopping experience for all customers.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>⁠Do you sell quality products?</summary>
+            <p>⁠At Norkix Hub, we carefully select stylish and quality pieces that combine elegance, confidence, and everyday luxury. Our goal is to help you achieve Classy Looks, Everyday Luxury.</p>
+        </details>
+
+    </div>
+
+</section>
+
+<br>
+
+<a class="contact-btn" href="mailto:norkixhubs@outlook.com?subject=SPYDERTECH%20Inquiry&body=Hello%20SPYDERTECH,%20I%20would%20like%20to%20ask%20about%20your%20services.">
+    Email Us
+</a>
+</div>
+
+<a
+</section>
+<footer>
+<p>&copy; 2026 NORKIXHUB!. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+
